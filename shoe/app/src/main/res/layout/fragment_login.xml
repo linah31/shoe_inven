@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.GameFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center">
 
+        <TextView
+            android:id="@+id/etxt"
+            style="@style/logintxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textColor="@color/LPalate"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="64dp" />
 
+        <EditText
+            android:id="@+id/enterem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:ems="10"
+            android:hint="enter email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toEndOf="@+id/etxt"
+            tools:layout_editor_absoluteY="64dp" />
+
+        <TextView
+            android:id="@+id/ptxt"
+            style="@style/logintxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="@color/LPalate"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="119dp" />
+
+        <EditText
+            android:id="@+id/enterpas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="enter password"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="130dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
