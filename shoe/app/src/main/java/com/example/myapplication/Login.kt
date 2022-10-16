@@ -12,7 +12,7 @@ import viewmodel
 
 class Login : Fragment() {
 
-    private lateinit var viewModel: viewmodel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,9 +35,7 @@ class Login : Fragment() {
         return view
     }
 
-    private fun createviewmodel (){
-        viewModel= ViewModelProvider(this).get(viewmodel:: class.java)
-    }
+
 
 
 

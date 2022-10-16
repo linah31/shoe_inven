@@ -23,5 +23,21 @@
     <fragment
         android:id="@+id/instuctions"
         android:name="com.example.myapplication.instuctions"
-        android:label="instuctions" />
+        android:label="instuctions" >
+        <action
+            android:id="@+id/action_instuctions_to_shoelist"
+            app:destination="@id/shoelist" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoelist"
+        android:name="com.example.myapplication.shoelist"
+        android:label="shoelist" >
+        <action
+            android:id="@+id/action_shoelist_to_shoe_detalis"
+            app:destination="@id/shoe_detalis" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoe_detalis"
+        android:name="com.example.myapplication.shoe_detalis"
+        android:label="shoe_detalis" />
 </navigation>

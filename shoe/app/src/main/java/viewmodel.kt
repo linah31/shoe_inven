@@ -7,8 +7,12 @@ class viewmodel : ViewModel() {
 
 
 
-    val shoecomp: MutableLiveData<String>by lazy { MutableLiveData<String>() }
-    val shoename: MutableLiveData<String>by lazy { MutableLiveData<String>() }
-    val shoedes: MutableLiveData<String>by lazy { MutableLiveData<String>() }
-    val shoesize: MutableLiveData<Float>by lazy { MutableLiveData<Float>() }
+
+    val shoes: MutableLiveData<shoe>by lazy { MutableLiveData<shoe>() }
+
+
+
+    public fun send(shoeobj: shoe ) {
+        shoes.value=shoeobj
+    }
 }

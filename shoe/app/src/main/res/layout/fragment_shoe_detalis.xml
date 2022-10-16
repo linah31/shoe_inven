@@ -84,13 +84,25 @@
             android:id="@+id/addbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="148dp"
+            android:layout_marginBottom="72dp"
             android:text="Add Shoe"
             app:backgroundTint="@color/lav3"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintEnd_toStartOf="@+id/cancelbtn"
+            app:layout_constraintHorizontal_bias="0.372"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/cancelbtn"
+            style="@style/btnstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="72dp"
+            android:text="Cancel"
+            app:backgroundTint="@color/lav3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
