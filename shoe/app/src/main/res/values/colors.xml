@@ -8,4 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="LPalate">#0081A7</color>
+    <color name="LPalate2">#F07167</color>
+    <color name="Lav">#847996</color>
+    <color name="lav2">#310A31</color>
+    <color name="lav3">#88B7B5</color>
+    <color name="lav4">#A7CAB1</color>
+    <color name="lav5">#F4ECD6</color>
+    <color name="lav6">#8698A6</color>
 </resources>

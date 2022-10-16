@@ -4,4 +4,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">EMAIL</string>
     <string name="password">PASSWORD</string>
+    <string name="welcome">"WELCOME "</string>
+    <string name="wtitle">WELCOME</string>
+    <string name="description">Design your own shoes to Fit and Match your style!!</string>
+    <string name="inst">HOW TO USE IT?</string>
+    <string name="inst2">Add shoe brand , size, color, and description</string>
+    <string name="shoed">SHOE DETAILS</string>
 </resources>

@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.navigation.GameFragment">
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:foregroundGravity="center">
+        android:layout_gravity="center_vertical"
+        android:background="@color/lav5">
+
+
+        <EditText
+            android:id="@+id/enterem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="264dp"
+            android:ems="10"
+            android:hint="enter email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/lav2"
+            android:textColorHint="@color/Lav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.417"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/etxt"
@@ -15,21 +35,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email"
-            android:textColor="@color/LPalate"
+            android:textColor="@color/Lav"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="64dp" />
-
-        <EditText
-            android:id="@+id/enterem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:ems="10"
-            android:hint="enter email"
-            android:inputType="textEmailAddress"
-            app:layout_constraintStart_toEndOf="@+id/etxt"
-            tools:layout_editor_absoluteY="64dp" />
+            app:layout_constraintBottom_toTopOf="@+id/enterem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.809" />
 
         <TextView
             android:id="@+id/ptxt"
@@ -37,19 +50,54 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/password"
-            android:textColor="@color/LPalate"
+            android:textColor="@color/Lav"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="119dp" />
+            app:layout_constraintBottom_toTopOf="@+id/enterpas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterem"
+            app:layout_constraintVertical_bias="0.413" />
 
         <EditText
             android:id="@+id/enterpas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="248dp"
             android:ems="10"
             android:hint="enter password"
             android:inputType="textPassword"
-            tools:layout_editor_absoluteX="185dp"
-            tools:layout_editor_absoluteY="130dp" />
+            android:textColor="@color/lav2"
+            android:textColorHint="@color/Lav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.417"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/logbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:text="LOGIN"
+            app:backgroundTint="@color/lav3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterpas"
+            app:layout_constraintVertical_bias="0.505" />
+
+        <Button
+            android:id="@+id/signbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGNUP"
+            app:backgroundTint="@color/lav3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.717"
+            app:layout_constraintStart_toEndOf="@+id/logbtn"
+            app:layout_constraintTop_toBottomOf="@+id/enterpas"
+            app:layout_constraintVertical_bias="0.505" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

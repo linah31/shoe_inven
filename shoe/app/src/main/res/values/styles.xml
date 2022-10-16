@@ -7,4 +7,17 @@
         <item name="android:fontFamily">@font/croissant_one</item>
         <item name="android:padding">@dimen/padtxt</item>
     </style>
+
+    <style name="titlestyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/lav2</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="btnstyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">112dp</item>
+    </style>
 </resources>
