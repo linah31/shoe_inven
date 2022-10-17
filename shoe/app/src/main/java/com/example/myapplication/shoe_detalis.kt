@@ -27,13 +27,14 @@ class shoe_detalis : Fragment() {
         viewModel = ViewModelProvider(this).get(viewmodel::class.java)
         val addbtn: Button = view.findViewById(R.id.addbtn)
         val canbtn: Button=view.findViewById(R.id.cancelbtn)
-        val lay: LinearLayout=view.findViewById(R.id.l1)
+
 
         val sname: EditText = view.findViewById(R.id.shoename)
 
 
         addbtn.setOnClickListener {
-            //viewModel.send(sname.text.toString())
+
+
             val frag = shoelist()
             val t1 = fragmentManager?.beginTransaction()
             t1?.replace(R.id.nav_container, frag)?.commit()
@@ -50,8 +51,11 @@ class shoe_detalis : Fragment() {
         }
 
 
+
         return view
     }
+
+
 
 
 }
