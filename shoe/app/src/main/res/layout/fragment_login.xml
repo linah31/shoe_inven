@@ -6,7 +6,9 @@
 
     >
     <data>
-
+<variable
+    name="login"
+    type="com.example.myapplication.Login" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

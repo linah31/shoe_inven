@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.databinding.FragmentShoeDetalisBinding
 
 
 class shoe_detalis : Fragment() {
@@ -19,35 +22,28 @@ class shoe_detalis : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_shoe_detalis, container, false)
         // Inflate the layout for this fragment
-      //  viewModel = ViewModelProvider(this).get(viewmodel::class.java)
-        val addbtn: Button = view.findViewById(R.id.addbtn)
-        val canbtn: Button=view.findViewById(R.id.cancelbtn)
-        val sname: EditText = view.findViewById(R.id.shoename)
-        val sdes: EditText = view.findViewById(R.id.destxtx)
-        val scomp: EditText = view.findViewById(R.id.companytxt)
-        val ssize: EditText = view.findViewById(R.id.sizetxt)
+        val binding: FragmentShoeDetalisBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detalis, container, false)
 
+        binding.addbtn.setOnClickListener {
+            var name= binding.shoename.text.toString()
+            var des= binding.destxtx.text.toString()
+            var comp=binding.companytxt.text.toString()
+            var size=binding.sizetxt.text.toString()
 
-        addbtn.setOnClickListener {
-            var name= sname.text.toString()
-            var des= sdes.text.toString()
-            var comp=scomp.text.toString()
-            var size=ssize.text.toString()
             viewModel.addshoe(name, des, comp, size)
             val frag = shoelist()
             val t1 = fragmentManager?.beginTransaction()
             t1?.replace(R.id.nav_container, frag)?.commit()
         }
 
-        canbtn.setOnClickListener{
+        binding.cancelbtn.setOnClickListener{
             val frag = shoelist()
             val t1 = fragmentManager?.beginTransaction()
             t1?.replace(R.id.nav_container, frag)?.commit()
         }
 
-        return view
+        return binding.root
     }
 
 

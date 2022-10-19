@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import com.example.myapplication.databinding.FragmentShoelistBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -20,11 +22,13 @@ class shoelist : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view= inflater.inflate(R.layout.fragment_shoelist, container, false)
-        val abtn: FloatingActionButton =view.findViewById(R.id.addnewbtn)
+       // val view= inflater.inflate(R.layout.fragment_shoelist, container, false)
+        val binding: FragmentShoelistBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoelist, container, false)
+
+        //val abtn: FloatingActionButton =view.findViewById(R.id.addnewbtn)
         val lay=LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,10)
         setHasOptionsMenu(true)
-        abtn.setOnClickListener {
+        binding.addnewbtn.setOnClickListener {
             val frag = shoe_detalis()
             val t1 = fragmentManager?.beginTransaction()
             t1?.replace(R.id.nav_container, frag)?.commit()
@@ -59,14 +63,14 @@ val iterator=it.listIterator()
         mainlay.addView(_description)
         mainlay.addView(_company)
         mainlay.addView(_size)
-        val mylayout:LinearLayout=view.findViewById(R.id.l1)
-        mylayout.addView(mainlay,params)
+        binding.l1.addView(mainlay,params)
+
 
     }
 })
 
 
-        return view
+        return binding.root
     }
 
 

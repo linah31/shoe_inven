@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.databinding.DataBindingUtil
+import com.example.myapplication.databinding.FragmentWelcomeBinding
 
 class welcome : Fragment() {
 
@@ -14,17 +16,16 @@ class welcome : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view= inflater.inflate(R.layout.fragment_welcome, container, false)
+        val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
 
-        val wbtn: Button =view.findViewById(R.id.welbtn)
 
-        wbtn.setOnClickListener {
+        binding.welbtn.setOnClickListener {
             val frag = instuctions()
             val t1 = fragmentManager?.beginTransaction()
             t1?.replace(R.id.nav_container, frag)?.commit()
         }
 
-        return view
+        return binding.root
 
     }
 

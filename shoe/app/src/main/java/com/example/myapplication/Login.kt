@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.databinding.DataBindingUtil
+import com.example.myapplication.databinding.FragmentLoginBinding
 
 
 class Login : Fragment() {
@@ -19,21 +21,18 @@ class Login : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_login, container, false)
-
-        val lbtn: Button=view.findViewById(R.id.logbtn)
-        val sbtn: Button=view.findViewById(R.id.signbtn)
-        lbtn.setOnClickListener {
+        val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+        binding.signbtn.setOnClickListener{
             val frag = welcome()
             val t1 = fragmentManager?.beginTransaction()
             t1?.replace(R.id.nav_container, frag)?.commit()
         }
-        sbtn.setOnClickListener {
+        binding.logbtn.setOnClickListener {
             val frag = welcome()
             val t1 = fragmentManager?.beginTransaction()
             t1?.replace(R.id.nav_container, frag)?.commit()
         }
-        return view
+        return binding.root
     }
 
 
