@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     >
-
-
+    <data>
+        <variable
+            name="shoes"
+            type="com.example.myapplication.Shoes" />
+    </data>
+<!--  using constraintlayout to to improve UI performance -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,6 +40,7 @@
             android:ems="10"
             android:hint="Add Company"
             android:inputType="textPersonName"
+            android:text="@={shoes.company}"
             app:layout_constraintBottom_toTopOf="@+id/shoename"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
@@ -48,6 +53,7 @@
             android:layout_marginBottom="24dp"
             android:ems="10"
             android:hint="Add Name"
+            android:text="@={shoes.name}"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/destxtx"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +68,7 @@
             android:ems="10"
             android:hint="Add discription"
             android:inputType="textMultiLine|textPersonName"
+            android:text="@={shoes.description}"
             app:layout_constraintBottom_toTopOf="@+id/sizetxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
@@ -75,6 +82,7 @@
             android:ems="10"
             android:hint="Add size"
             android:inputType="number"
+            android:text="@={shoes.size}"
             app:layout_constraintBottom_toTopOf="@+id/addbtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"

@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+<variable
+    name="shoes"
+    type="com.example.myapplication.Shoes" />
     </data>
-
+    <!--  using constraintlayout to to improve UI performance -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,6 +26,7 @@
 
 
 
+            <!--  using LinearLayout to to provide more rational space to children -->
 
             <LinearLayout
                 android:id="@+id/l1"
